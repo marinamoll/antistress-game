@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.textos{
+    padding: 10px;
+    text-align: center;
+}
+
+.textos h1, h2{
+    font-family: Helvetica;
+    color: rgb(101, 147, 112);
+    margin-bottom: 10px;
+}
+
+.textos h4, p{
+    font-family: Helvetica;
+    color: rgb(44, 83, 125);
+}
+
+.game-board{
+    width: 60%;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 20px solid rgb(241, 232, 134);
+    background: linear-gradient(rgb(162, 212, 238), rgb(241, 239, 213));
+}
+
+.cactus{
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: cactus-posicao 2s infinite linear;
+}
+
+.nuvem{
+    position: absolute;
+    width: 600px;
+    animation: nuvem-posicao 20s infinite linear;
+}
+
+.guri {
+    position: absolute;
+    width: 300px;
+    bottom: 0;
+}
+
+.pulo{
+    animation: pulo 800ms ease-out;
+}
+
+@keyframes cactus-posicao{
+    from{
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 190px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvem-posicao {
+    from{
+        right: -600px;
+    }
+    to{
+        right: 100%;
+    }
+}
